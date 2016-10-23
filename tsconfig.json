@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "module": "es2015",
+        "target": "es5",
+        "moduleResolution": "node",
+        "removeComments": true,
+        "noImplicitAny": false,
+        "sourceMap": true,
+        "outDir": "./dist"
+    },
+    "exclude": [
+      "node_modules",
+      "dist"
+    ]
+}
