@@ -2,7 +2,7 @@ import Dog from './dog'
 import { square } from './maths'
 // import { getPost } from './asnyc'
 
-// Modules -- WORK, when piping them threw ts-loader
+// Modules -- WORK, when piping them through ts-loader
 
 /* Classes - WORK */
 let snoopy = new Dog('Snoopy')
@@ -27,7 +27,8 @@ console.log(mixer)
 /* Observation: Immediately invoked  async arrow function does not work */
 // (async function():void {
   /**
-   * Observation: Async/Await works, but only if you leave the file as js as apparently the compiler then won't check typings
+   * Observation: Async/Await works, but only if you leave the file as js
+   * the caveat being that the compiler then won't do static type checking
    * */
   // let json = await getPost(1)
   // console.log(json)
