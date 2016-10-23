@@ -5,14 +5,14 @@ module.exports = {
   devtool: '#source-map',
   bail: false,
   entry: {
-    app: path.resolve(__dirname, 'src', 'index.js')
+    app: path.resolve(__dirname, 'src', 'index.ts')
   },
   output: {
     filename: '[name].[hash].js',
     path: path.resolve(__dirname, 'dist')
   },
   resolve: {
-    extensions: ['.js'],
+    extensions: ['.js', '.ts'],
     modules: [
       'node_modules',
       path.resolve(__dirname, 'src')
@@ -21,7 +21,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.js$|\.ts$/,
         loader: 'ts-loader',
         exclude: /node_modules/
       }

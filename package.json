@@ -7,7 +7,7 @@
   "scripts": {
     "lint": "eslint --ext .js src test",
     "start": "webpack-dev-server",
-    "test": "mocha --require intelli-espower-loader test/**/*.spec.js"
+    "test": "mocha --compilers ts:ts-node/register --require espower-ts-node test/**/*.spec.ts"
   },
   "repository": {
     "type": "git",
@@ -19,15 +19,21 @@
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
+    "@types/es6-shim": "^0.31.32",
+    "@types/mocha": "^2.2.32",
+    "@types/power-assert": "^1.4.29",
     "eslint": "^3.8.1",
     "eslint-config-standard": "^6.2.0",
     "eslint-plugin-promise": "^3.3.0",
     "eslint-plugin-standard": "^2.0.1",
+    "espower-ts-node": "^1.0.3",
+    "espower-typescript": "^5.0.1",
     "html-webpack-plugin": "2",
     "intelli-espower-loader": "^1.0.1",
     "mocha": "^3.1.2",
     "power-assert": "^1.4.1",
     "ts-loader": "^0.9.5",
+    "ts-node": "^1.6.0",
     "typescript": "^2.0.3",
     "webpack": "2.1.0-beta.25",
     "webpack-dev-server": "2.1.0-beta.9"
